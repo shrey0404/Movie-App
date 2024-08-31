@@ -32,8 +32,6 @@ export const getMovieDetails = async (id) => {
   return response.json();
 };
 
-// services/api.js
-
 export const getRecommendedMovies = async (id) => {
   const response = await fetch(
     `${BASE_URL}/movie/${id}/recommendations?api_key=${API_KEY}`
