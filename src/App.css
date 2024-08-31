@@ -75,3 +75,23 @@ body {
     font-size: 0.9em;
     color: #666;
   }
+
+
+.favorites-list {
+    margin-top: 40px;
+  }
+  
+  .favorites-list h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .recommendations-list {
+    margin-top: 40px;
+  }
+  
+  .recommendations-list h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  

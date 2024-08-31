@@ -24,12 +24,22 @@ export const searchMovies = async (query) => {
   }
 };
 
-export const getMovieDetails = async (movieId) => {
-  try {
-    const response = await api.get(`/movie/${movieId}`);
-    return response.data;
-  } catch (error) {
-    console.error("Error fetching movie details:", error);
-    return null;
+export const getMovieDetails = async (id) => {
+  const response = await fetch(`${BASE_URL}/movie/${id}?api_key=${API_KEY}`);
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
   }
+  return response.json();
+};
+
+// services/api.js
+
+export const getRecommendedMovies = async (id) => {
+  const response = await fetch(
+    `${BASE_URL}/movie/${id}/recommendations?api_key=${API_KEY}`
+  );
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+  return response.json();
 };
