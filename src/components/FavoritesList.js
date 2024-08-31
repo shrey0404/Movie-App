@@ -15,6 +15,9 @@ function FavoritesList({ favorites, onFavorite }) {
                 poster: `https://image.tmdb.org/t/p/w200${movie.poster_path}`,
                 releaseDate: movie.release_date,
               }}
+              onClick={() => {
+                /* Optional: Add logic to view details */
+              }}
               onFavorite={() => onFavorite(movie)}
               isFavorite={true} // Always true because these are favorites
             />

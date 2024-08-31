@@ -39,51 +39,6 @@ body {
     outline: none;
   }
 
-   
-
-.App {
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .App.light {
-    background-color: #fff;
-    color: #000;
-  }
-  
-  .App.dark {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  
-  .theme-toggle-button {
-    background-color: #74aeed;
-    color: #fff;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .theme-toggle-button:hover {
-    background-color: #397fc9;
-  }
-  
-  .theme-toggle-button:active {
-    transform: scale(0.95);
-  }
-  
-  .theme-toggle-button .icon {
-    font-size: 20px;
-  }
-  
-
   .movie-list {
     display: flex;
     flex-wrap: wrap;
@@ -91,6 +46,56 @@ body {
     gap: 20px;
   }
   
+  .movie-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .movie-card p {
+    font-size: 0.9em;
+    color: #666;
+  }
+
+
+.favorites-list {
+    margin-top: 40px;
+  }
+  
+  .favorites-list h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .recommendations-list {
+    margin-top: 40px;
+  }
+  
+  .recommendations-list h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+
   .movie-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -121,8 +126,6 @@ body {
   .movie-release-date {
     color: #555;
   }
-
-  
   
   .view-details-button,
   .favorite-button {
@@ -161,10 +164,45 @@ body {
     background-color: #218838;
   }
   
-
-.favorites-list {
-    margin-top: 40px;
-    
+  .App {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .App.light {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .App.dark {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  
+  .theme-toggle-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .theme-toggle-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .theme-toggle-button:active {
+    transform: scale(0.95);
+  }
+  
+  .theme-toggle-button .icon {
+    font-size: 20px;
   }
 
   .favlist2 {
@@ -173,18 +211,3 @@ body {
     justify-content: center;
     gap: 20px;
   }
-  
-  .favorites-list h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .recommendations-list {
-    margin-top: 40px;
-  }
-  
-  .recommendations-list h3 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-  }
-  

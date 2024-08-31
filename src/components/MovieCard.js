@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css"; // Import the CSS file for styling
 
 function MovieCard({ movie, onClick, onFavorite, isFavorite }) {
   return (

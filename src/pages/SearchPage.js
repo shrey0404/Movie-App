@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 import MovieCard from "../components/MovieCard";
-import FavoritesList from "../components/FavoritesList"; // Import FavoritesList
 import { searchMovies } from "../services/api";
+import FavoritesList from "../components/FavoritesList";
 
 function SearchPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -61,7 +61,7 @@ function SearchPage() {
               }}
               onClick={() => handleMovieClick(movie.id)}
               onFavorite={() => handleFavorite(movie)}
-              isFavorite={isFavorite(movie.id)}
+              isFavorite={isFavorite(movie.id)} // Pass isFavorite prop
             />
           ))
         ) : (
